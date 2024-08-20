@@ -61,7 +61,7 @@ def query(q):
     print()
     query = {
         "sel":"SELECT * FROM [Indigo].[dbo].[f_GreyFinishingMaster]\nWHERE Process like ('')\nAND Roll_ID in ('')",
-        "des":"SELECT [RowID],[Process],[Roll_ID],[MtrsIn],[MtrsOut],[NextProcess]\nFROM [Indigo].[dbo].[f_GreyFinishingMaster]\nWHERE Process like ('')\nAND Roll_ID in ('')",
+        "des":"SELECT [RowID],[Process],[Roll_ID],[MtrsIn],[MtrsOut],[NextProcess]\nFROM [Indigo].[dbo].[f_GreyFinishingMaster]\nWHERE Process like ('')\nAND Roll_ID in ('')\nORDER By Roll_ID",
     }
     pyperclip.copy(query[q])
     print(query[q])
